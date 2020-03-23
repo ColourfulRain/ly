@@ -1,0 +1,17 @@
+server:
+  port: 8200
+spring:
+  application:
+    name: ly-gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka
+    #   注册时间
+    registry-fetch-interval-seconds: 5
+zuul:
+  #  路由前缀
+  prefix: /api
+  routes:
+    #路由到商品的映射路径
+    item-service: /item/**

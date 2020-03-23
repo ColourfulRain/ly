@@ -1,0 +1,21 @@
+server:
+  port: 8301
+spring:
+  application:
+    name: item-service
+  datasource:
+    url: jdbc:mysql://qianqian.mysql.zhangbei.rds.aliyuncs.com:3306/heima?useUnicode=true&characterEncoding=utf-8
+    username: roots
+    password: QianQian123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka
+  instance:
+    #心跳时间
+    lease-renewal-interval-in-seconds: 5
+    #过期时间
+    lease-expiration-duration-in-seconds: 15
+mybatis:
+  type-aliases-package: com.ly.pojo
